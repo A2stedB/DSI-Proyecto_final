@@ -1,0 +1,111 @@
+.selection-box:hover .selection-box__square {
+    background-color: rgb(218, 212, 187);
+}
+
+.selection-box:hover .selection-box__label {
+    background-color: rgba(218, 212, 187, 0);
+    color: rgb(218, 212, 187);
+}
+
+.selection-box:hover .selection-box__background {
+    background-color: rgb(78, 75, 66);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.selection-box:hover .selection-box__inner-line {
+    background-color: rgb(218, 212, 187);
+    height: 50%;
+}
+
+.selection-box:hover .selection-box__outer-line {
+    background-color: rgba(78, 75, 66, 0);
+    height: 50%;
+}
+
+.selection-box:hover .selection-box__fill {
+    width: 100%;
+}
+
+.selection-box {
+    flex-grow: 1;
+    height: 100px;
+    background-color: rgb(170, 165, 145);
+}
+
+.selection-box__square {
+    flex-grow: 0;
+    align-content: auto;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgb(78, 75, 66);
+    flex-direction: column;
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-basis: auto;
+    transform-origin: center;
+    scale: 0.5 0.5;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.selection-box__label {
+    flex-direction: row;
+    -unity-text-align: middle-left;
+    color: rgb(78, 75, 66);
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=3b6975b7adcd84643bc72a3f0b8f54af&type=3#NotInter-Regular");
+    text-overflow: clip;
+    flex-shrink: 1;
+    flex-grow: 1;
+    transition-property: color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.selection-box__inner-line {
+    flex-grow: 1;
+    height: 50%;
+    background-color: rgb(170, 165, 145);
+}
+
+.selection-box__outer-line {
+    flex-grow: 1;
+    height: 50%;
+    background-color: rgba(170, 165, 145, 0);
+}
+
+.selection-box__background {
+    flex-grow: 1;
+    height: 80%;
+    background-color: rgba(170, 165, 145, 0);
+    flex-direction: row;
+    background-size: 100% 100%;
+}
+
+.selection-box__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    background-color: rgb(78, 75, 66);
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+}

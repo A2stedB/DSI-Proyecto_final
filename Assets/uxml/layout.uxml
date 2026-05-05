@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/style.uss?fileID=7433441132597879392&amp;guid=b282a3506503be24490293585bcd7d12&amp;type=3#style"/>
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(218, 212, 187);">
+        <ui:VisualElement style="flex-grow: 1; height: 10%;"/>
+        <ui:VisualElement name="Main" style="flex-grow: 1; height: 80%; flex-direction: row;">
+            <ui:VisualElement name="Options" style="flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="Border-Left" style="flex-grow: 0; width: 5%; flex-direction: column; align-self: auto; align-items: auto;"/>
+                <ui:VisualElement name="OptionZone" style="flex-grow: 0; width: 50%; align-content: auto; align-self: center; align-items: center; justify-content: space-evenly; flex-direction: column; height: 100%; flex-wrap: nowrap; flex-shrink: 0;">
+                    <SelectionBox button-text="Save" style="align-self: stretch; align-content: stretch; flex-direction: row; flex-wrap: nowrap;"/>
+                    <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
+                    <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
+                    <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="Border-Right" style="flex-grow: 1; width: 10%; flex-direction: column; align-self: auto; align-items: auto;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Content" style="flex-grow: 1;"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; height: 10%;"/>
+    </ui:VisualElement>
+</ui:UXML>
