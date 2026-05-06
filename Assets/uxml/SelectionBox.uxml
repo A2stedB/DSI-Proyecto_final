@@ -1,3 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
     <SelectionBox name="SelectionBox" style="flex-grow: 1; min-height: 100px; align-self: flex-start; width: 100%;"/>
 </ui:UXML>

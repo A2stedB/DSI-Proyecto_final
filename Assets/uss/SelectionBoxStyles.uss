@@ -1,30 +1,27 @@
-.selection-box:hover .selection-box__square {
+.is-interactable:hover .selection-box__square {
     background-color: rgb(218, 212, 187);
 }
 
-.selection-box:hover .selection-box__label {
+.is-interactable:hover .selection-box__label {
     background-color: rgba(218, 212, 187, 0);
     color: rgb(218, 212, 187);
 }
 
-.selection-box:hover .selection-box__background {
+.is-interactable:hover .selection-box__background {
     background-color: rgb(78, 75, 66);
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out-cubic;
 }
 
-.selection-box:hover .selection-box__inner-line {
+.is-interactable:hover .selection-box__inner-line {
     background-color: rgb(218, 212, 187);
     height: 50%;
 }
 
-.selection-box:hover .selection-box__outer-line {
+.is-interactable:hover .selection-box__outer-line {
     background-color: rgba(78, 75, 66, 0);
     height: 50%;
 }
 
-.selection-box:hover .selection-box__fill {
+.is-interactable:hover .selection-box__fill {
     width: 100%;
 }
 
@@ -32,6 +29,7 @@
     flex-grow: 1;
     height: 100px;
     background-color: rgb(170, 165, 145);
+    width: auto;
 }
 
 .selection-box__square {
@@ -96,6 +94,9 @@
     background-color: rgba(170, 165, 145, 0);
     flex-direction: row;
     background-size: 100% 100%;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
 }
 
 .selection-box__fill {
@@ -108,4 +109,40 @@
     transition-property: width;
     transition-duration: 0.5s;
     transition-timing-function: ease-out-cubic;
+}
+
+.is-selected .selection-box {
+    background-color: rgb(101, 98, 86);
+}
+
+.is-selected .selection-box__square {
+    background-color: rgb(218, 212, 187);
+}
+
+.is-selected .selection-box__label {
+    background-color: rgb(101, 98, 86);
+    color: rgb(218, 212, 187);
+}
+
+.is-selected .selection-box__inner-line {
+    background-color: rgb(101, 98, 86);
+    height: 50%;
+}
+
+.is-selected .selection-box__outer-line {
+    background-color: rgb(101, 98, 86);
+    height: 50%;
+}
+
+.is-selected .selection-box__background {
+    flex-grow: 1;
+    height: 80%;
+    background-color: rgba(101, 98, 86, 0);
+    flex-direction: row;
+    background-size: 100% 100%;
+}
+
+.is-selected .selection-box__fill {
+    width: 100%;
+    background-color: rgb(101, 98, 86);
 }

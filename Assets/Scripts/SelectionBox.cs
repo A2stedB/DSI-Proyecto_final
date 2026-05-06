@@ -16,8 +16,6 @@ public partial class SelectionBox : VisualElement
 
     private Label m_Label;
 
-    // Propiedad p¨²blica para leer/escribir el texto.
-    // Esto se comunica directamente con el componente Label de la UI.
     [UxmlAttribute]
     public string ButtonText
     {
@@ -41,7 +39,7 @@ public partial class SelectionBox : VisualElement
         }
         else
         {
-            Debug.LogError("No se pudo cargar selectionBoxTemplate.uxml. Aseg¨²rate de que est¨¦ en una carpeta Resources.");
+            //Debug.LogError("No se pudo cargar selectionBoxTemplate.uxml. Aseg¨²rate de que est¨¦ en una carpeta Resources.");
         }
 
         m_Label = this.Q<Label>("Label");

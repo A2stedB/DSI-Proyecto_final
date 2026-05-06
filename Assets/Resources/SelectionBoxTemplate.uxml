@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
-    <ui:VisualElement class="selection-box" style="margin-top: 10px; margin-bottom: 10px; min-height: 70px;">
+    <ui:VisualElement class="selection-box" style="margin-top: 0; margin-bottom: 0; min-height: 70px; margin-right: 0; margin-left: 0;">
         <ui:VisualElement name="Fill" class="selection-box__fill" style="flex-grow: 1;"/>
         <ui:VisualElement name="Up" style="flex-grow: 1; height: 10%;">
             <ui:VisualElement class="selection-box__outer-line"/>
@@ -9,7 +9,7 @@
         <ui:VisualElement name="Main" class="selection-box__background" style="background-size: 100% 100%; background-color: rgba(170, 165, 145, 0);">
             <ui:VisualElement class="selection-box__square" style="width: 70px; height: 70px;"/>
             <ui:VisualElement name="" style="flex-grow: 1; justify-content: flex-start; flex-direction: row; align-items: auto; align-self: center; align-content: center;">
-                <ui:Label text="Label" name="Label" class="selection-box__label"/>
+                <ui:Label text="Label" name="Label" class="selection-box__label" style="font-size: 20px;"/>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Down" style="flex-grow: 1; height: 10%;">

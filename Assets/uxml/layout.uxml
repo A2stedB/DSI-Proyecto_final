@@ -1,19 +1,30 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="NameEntryContent" src="project://database/Assets/uxml/NameEntryContent.uxml?fileID=9197481963319205126&amp;guid=476f5ec39315b344286de74657cd5dae&amp;type=3#NameEntryContent"/>
+    <ui:Template name="OptionsContent" src="project://database/Assets/uxml/OptionsContent.uxml?fileID=9197481963319205126&amp;guid=e4f7bd2c4936514419a1862579f13ef3&amp;type=3#OptionsContent"/>
     <Style src="project://database/Assets/style.uss?fileID=7433441132597879392&amp;guid=b282a3506503be24490293585bcd7d12&amp;type=3#style"/>
+    <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
     <ui:VisualElement style="flex-grow: 1; background-color: rgb(218, 212, 187);">
-        <ui:VisualElement style="flex-grow: 1; height: 10%;"/>
+        <ui:VisualElement style="flex-grow: 1; height: 10%; flex-direction: row;">
+            <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 2.5%; flex-direction: row;"/>
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: auto; align-content: flex-end; justify-content: flex-start; align-items: center;">
+                <ui:Label text="Label" style="color: rgb(78, 75, 66); font-size: 25px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="Main" style="flex-grow: 1; height: 80%; flex-direction: row;">
-            <ui:VisualElement name="Options" style="flex-grow: 1; flex-direction: row;">
-                <ui:VisualElement name="Border-Left" style="flex-grow: 0; width: 5%; flex-direction: column; align-self: auto; align-items: auto;"/>
-                <ui:VisualElement name="OptionZone" style="flex-grow: 0; width: 50%; align-content: auto; align-self: center; align-items: center; justify-content: space-evenly; flex-direction: column; height: 100%; flex-wrap: nowrap; flex-shrink: 0;">
-                    <SelectionBox button-text="Save" style="align-self: stretch; align-content: stretch; flex-direction: row; flex-wrap: nowrap;"/>
-                    <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
-                    <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
+            <ui:VisualElement name="Border-Left" style="flex-grow: 0; width: 5%; flex-direction: column; align-self: auto; align-items: auto;"/>
+            <ui:VisualElement name="Options" style="flex-grow: 0; flex-direction: row; width: 30%; align-content: auto; flex-shrink: 1; align-self: auto; justify-content: flex-start;">
+                <ui:VisualElement name="OptionZone" style="flex-grow: 0; width: 100%; align-content: auto; align-self: center; align-items: center; justify-content: space-around; flex-direction: column; height: 100%; flex-wrap: nowrap; flex-shrink: 0;">
+                    <SelectionBox button-text="Name Entry" name="NameEntry" style="align-self: stretch; align-content: stretch; flex-direction: row; flex-wrap: nowrap;"/>
+                    <SelectionBox button-text="Options" name="Options" style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
                     <SelectionBox style="align-self: stretch; align-content: stretch; flex-direction: row;"/>
                 </ui:VisualElement>
-                <ui:VisualElement name="Border-Right" style="flex-grow: 1; width: 10%; flex-direction: column; align-self: auto; align-items: auto;"/>
             </ui:VisualElement>
-            <ui:VisualElement name="Content" style="flex-grow: 1;"/>
+            <ui:VisualElement name="Spacing" style="flex-grow: 0; width: 5%; flex-direction: row; align-items: auto; align-content: auto;"/>
+            <ui:VisualElement name="Content" style="flex-grow: 1; flex-direction: row; align-items: center;">
+                <ui:Instance template="NameEntryContent" name="Content-NameEntry" style="flex-grow: 1; justify-content: flex-start; display: none; align-items: center; align-self: flex-start; align-content: auto;"/>
+                <ui:Instance template="OptionsContent" name="Content-Options" style="display: none; align-self: center; justify-content: center; align-content: center; align-items: center;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Border-Right" style="flex-grow: 0; flex-direction: column; width: 5%; align-content: auto; align-self: auto; justify-content: center; align-items: flex-end;"/>
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1; height: 10%;"/>
     </ui:VisualElement>
