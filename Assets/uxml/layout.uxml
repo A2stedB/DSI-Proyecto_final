@@ -7,7 +7,7 @@
         <ui:VisualElement style="flex-grow: 1; height: 10%; flex-direction: row;">
             <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 2.5%; flex-direction: row;"/>
             <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: auto; align-content: flex-end; justify-content: flex-start; align-items: center;">
-                <ui:Label text="Label" style="color: rgb(78, 75, 66); font-size: 25px;"/>
+                <ui:Label text="Label" name="Name" style="color: rgb(78, 75, 66); font-size: 25px;"/>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Main" style="flex-grow: 1; height: 80%; flex-direction: row;">

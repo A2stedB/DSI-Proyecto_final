@@ -3,5 +3,6 @@
         <ui:Toggle label="Toggle"/>
         <ui:Button text="Button"/>
         <ui:TextField label="Text Field" placeholder-text="filler text"/>
+        <ui:Slider label="Slider" value="42" high-value="100"/>
     </ui:VisualElement>
 </ui:UXML>

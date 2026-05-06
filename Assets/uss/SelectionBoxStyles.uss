@@ -59,7 +59,7 @@
     height: 100px;
     aspect-ratio: 1;
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-out-cubic;
 }
 
@@ -72,7 +72,7 @@
     flex-shrink: 1;
     flex-grow: 1;
     transition-property: color;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-out-cubic;
 }
 
@@ -95,7 +95,7 @@
     flex-direction: row;
     background-size: 100% 100%;
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-out-cubic;
 }
 
