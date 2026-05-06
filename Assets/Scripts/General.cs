@@ -12,7 +12,8 @@ public class SaveData
 {
     public string playerName = "";
     public bool optionToggle = false;
-    public float optionSlider = 0f;
+    public float optionSlider = 0f; 
+    public string optionDropdown = "8x";
 }
 public class General : MonoBehaviour
 {
@@ -25,10 +26,12 @@ public class General : MonoBehaviour
     private VisualElement currentActiveContent;
 
     private TextField nameField;
+    private Label charCounterLabel;
 
     private Label nameLabel;
     private Toggle toggle;
     private Slider slider;
+    private DropdownField dropdown;
 
     static private string saveFilePath;
     private SaveData currentData = new SaveData();
@@ -54,13 +57,6 @@ public class General : MonoBehaviour
         doc = GetComponent<UIDocument>();
         root = doc.rootVisualElement;
 
-        //nameEntry = root.Q<SelectionBox>();
-
-        //nameEntry.RegisterCallback<MouseDownEvent>(evt =>
-        //{
-        //    Debug.Log("Clicked on name entry button");
-        //});
-
         allTabs = root.Query<SelectionBox>().ToList();
 
         foreach (var tab in allTabs)
@@ -71,23 +67,30 @@ public class General : MonoBehaviour
         }
 
         VisualElement nameEntry = root.Q<VisualElement>(name: "Content-NameEntry");
+        charCounterLabel = nameEntry.Q<Label>(name: "CharCounter");
 
         nameField = nameEntry.Q<TextField>();
         VisualElement options = root.Q<VisualElement>(name: "Content-Options");
         toggle = options.Q<Toggle>();
         slider = options.Q<Slider>();
+        dropdown = options.Q<DropdownField>();
         nameLabel = root.Q<Label>(name:"Name");
         LoadSavedSettings();
+
+        UpdateCharacterCounter(currentData.playerName.Length);
 
         nameField.RegisterCallback<ChangeEvent<string>>(NameChange);
         toggle.RegisterCallback<ChangeEvent<bool>>(ToggleChange);
         slider.RegisterCallback<ChangeEvent<float>>(SliderChange);
+        dropdown.RegisterCallback<ChangeEvent<string>>(DropdownChange);
+
 
     }
 
     private void NameChange(ChangeEvent<string> evt)
     {
         nameLabel.text = evt.newValue;
+        UpdateCharacterCounter(evt.newValue.Length);
         currentData.playerName = nameLabel.text;
         SaveToJson();
     }
@@ -101,6 +104,12 @@ public class General : MonoBehaviour
     private void SliderChange(ChangeEvent<float> evt)
     {
         currentData.optionSlider = evt.newValue;
+        SaveToJson();
+    }
+
+    private void DropdownChange(ChangeEvent<string> evt)
+    {
+        currentData.optionDropdown = evt.newValue;
         SaveToJson();
     }
 
@@ -150,7 +159,7 @@ public class General : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"No se encontró el contenido: {contentNameToFind}. Asegúrate de nombrarlo correctamente en UI Builder.");
+
         }
 
         if(tabName == "NameEntry")
@@ -179,21 +188,31 @@ public class General : MonoBehaviour
         {
             string json = File.ReadAllText(saveFilePath);
             currentData = JsonUtility.FromJson<SaveData>(json);
-            Debug.Log("Datos cargados correctamente desde: " + saveFilePath);
         }
         else
         {
-            //Debug.Log("No se encontró archivo de guardado, usando valores por defecto.");
             SaveToJson();
         }
 
         if (nameLabel != null) nameLabel.text = currentData.playerName;
         if (toggle != null) toggle.SetValueWithoutNotify(currentData.optionToggle);
         if (slider != null) slider.SetValueWithoutNotify(currentData.optionSlider);
+        if (dropdown != null && !string.IsNullOrEmpty(currentData.optionDropdown))
+        {
+            dropdown.SetValueWithoutNotify(currentData.optionDropdown);
+        }
     }
     private void SaveToJson()
     {
         string json = JsonUtility.ToJson(currentData, true);
         File.WriteAllText(saveFilePath, json);
+    }
+
+    private void UpdateCharacterCounter(int currentLength)
+    {
+        if (charCounterLabel != null)
+        {
+            charCounterLabel.text = $"{currentLength}/16";
+        }
     }
 }

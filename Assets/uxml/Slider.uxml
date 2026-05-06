@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
+    <ui:VisualElement name="Box" class="selection-box is-interactable" style="flex-grow: 1; flex-direction: row; height: 50px;">
+        <ui:VisualElement name="Fill" class="selection-box__fill" style="flex-grow: 1;"/>
+        <ui:VisualElement name="Square" class="selection-box__square" style="flex-grow: 0; width: 20px; height: 20px; scale: 1 1; justify-content: flex-start; margin-left: 20px;"/>
+        <ui:Label text="Slider" class="selection-box__label" style="flex-grow: 1; margin-left: 15px;"/>
+        <ui:Slider label="" value="42" high-value="100" style="flex-grow: 0; margin-right: 20px; width: 150px;"/>
+    </ui:VisualElement>
+</ui:UXML>

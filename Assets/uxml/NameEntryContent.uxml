@@ -1,5 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; width: 659px; background-color: rgb(218, 212, 187); align-content: flex-start; align-self: auto; justify-content: center;">
-        <ui:TextField label="Text Field" placeholder-text="filler text"/>
+    <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
+    <ui:VisualElement style="flex-grow: 1; width: auto; background-color: rgba(218, 212, 187, 0); align-content: auto; align-self: auto; justify-content: center; align-items: center;">
+        <ui:VisualElement style="flex-grow: 0;">
+            <ui:Label text="User Name" style="color: rgb(78, 75, 66); align-self: stretch; justify-content: space-evenly; align-content: auto; align-items: stretch;"/>
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center;">
+                <ui:TextField label="" placeholder-text="filler text" max-length="16" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-color: rgb(175, 168, 141); width: 300px; height: 40px;"/>
+                <ui:Label text="Label" name="CharCounter" style="margin-left: 10px; -unity-text-align: upper-left; align-items: center; width: 40px; color: rgb(78, 75, 66);"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

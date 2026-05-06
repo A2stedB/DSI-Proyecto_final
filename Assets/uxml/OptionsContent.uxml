@@ -1,8 +1,11 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgb(218, 212, 187);">
-        <ui:Toggle label="Toggle"/>
-        <ui:Button text="Button"/>
-        <ui:TextField label="Text Field" placeholder-text="filler text"/>
-        <ui:Slider label="Slider" value="42" high-value="100"/>
+    <ui:Template name="Dropdown" src="project://database/Assets/uxml/Dropdown.uxml?fileID=9197481963319205126&amp;guid=caa42f31a78b6e4499a43c3e88153526&amp;type=3#Dropdown"/>
+    <ui:Template name="Slider" src="project://database/Assets/uxml/Slider.uxml?fileID=9197481963319205126&amp;guid=e6108a2704b8ac64383adb6c8061c572&amp;type=3#Slider"/>
+    <ui:Template name="Toggle" src="project://database/Assets/uxml/Toggle.uxml?fileID=9197481963319205126&amp;guid=57c0b80987a35694f91df2bb55d2d262&amp;type=3#Toggle"/>
+    <Style src="project://database/Assets/uss/SelectionBoxStyles.uss?fileID=7433441132597879392&amp;guid=6988b3793f69c8042bbcd16e78a3ef57&amp;type=3#SelectionBoxStyles"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(218, 212, 187, 0); justify-content: space-evenly; align-self: stretch; align-content: center; align-items: stretch;">
+        <ui:Instance template="Slider" name="" style="width: 100%;"/>
+        <ui:Instance template="Toggle" style="width: 100%;"/>
+        <ui:Instance template="Dropdown"/>
     </ui:VisualElement>
 </ui:UXML>
